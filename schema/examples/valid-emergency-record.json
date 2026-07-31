@@ -1,0 +1,11 @@
+{
+  "id": "example-fire-alert-001",
+  "source": "official-emergency-source",
+  "issuedAt": "2026-07-31T05:00:00Z",
+  "updatedAt": "2026-07-31T05:15:00Z",
+  "category": "wildfire",
+  "severity": "high",
+  "location": "Portugal",
+  "language": "en",
+  "instructions": "Follow official emergency instructions and contact emergency services if required."
+}
