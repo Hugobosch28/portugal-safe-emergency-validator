@@ -1,0 +1,46 @@
+{
+  "title": "Emergency Record",
+  "type": "object",
+  "required": [
+    "id",
+    "source",
+    "issuedAt",
+    "updatedAt",
+    "category",
+    "severity",
+    "location",
+    "language",
+    "instructions"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "issuedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "category": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "instructions": {
+      "type": "string"
+    }
+  }
+}
