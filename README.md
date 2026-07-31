@@ -1,132 +1,165 @@
-[![Test](https://github.com/Hugobosch28/portugal-safe-emergency-validator/actions/workflows/test.yml/badge.svg)](https://github.com/Hugobosch28/portugal-safe-emergency-validator/actions)
-
 # Portugal Safe Emergency Validator
 
-Open-source validation toolkit for emergency and public-safety data records.
+[![Test](https://github.com/Hugobosch28/portugal-safe-emergency-validator/actions/workflows/test.yml/badge.svg)](https://github.com/Hugobosch28/portugal-safe-emergency-validator/actions)
 
-## Overview
+## Reliable emergency data validation for public-safety applications
 
-Portugal Safe Emergency Validator helps developers verify that emergency records contain the required structure, provenance information, timestamps, geographic context, and safety instructions before they are consumed by applications.
+Portugal Safe Emergency Validator is an open-source technical component designed to improve the reliability of emergency and public-safety data before it is used by applications.
 
-The goal is to improve the reliability, traceability, and consistency of emergency information workflows.
+The validator helps detect incomplete, inconsistent, or poorly structured emergency records by checking important data quality requirements such as structure, provenance, timestamps, geographic context, severity, language metadata, and safety information.
 
-## Why this matters
+Reliable emergency information starts with reliable data.
 
-Emergency applications often combine information from multiple official and operational sources.
+---
 
-Incomplete records, missing provenance, invalid timestamps, or unclear instructions can reduce the reliability of safety information delivered to users.
+## Project context
 
-This project provides a validation layer that helps detect structural problems before emergency data is processed by downstream systems.
+Portugal Safe is an independent public-safety application focused on people living in, travelling through, or visiting Portugal.
 
-## Features
+The application brings together safety-related information from multiple public and official sources to make emergency information easier to understand and access.
 
-The validator currently checks:
+Current safety areas include:
 
-- required emergency record fields;
-- source and provenance information;
-- issued and updated timestamps;
-- emergency categories;
-- severity levels;
-- geographic information;
-- language metadata;
-- safety instructions.
+* wildfires and nature fires;
+* extreme heat and drought;
+* storms and other weather risks;
+* emergency notifications;
+* first-aid information;
+* emergency preparation;
+* local safety information.
 
-The repository includes:
+The Emergency Validator is a separate open-source component that supports the reliability of these information workflows.
 
-- validation schema;
-- validator implementation;
-- command-line validation tool;
-- example emergency records;
-- automated tests;
-- GitHub Actions CI workflow.
+---
 
-## Project Structure
+## Why this project matters
 
-```
-src/        Validator implementation
-bin/        Command-line validation tool
-schema/     Emergency record schema and examples
-test/       Automated tests
-.github/    Continuous integration workflow
-```
+During emergencies, information quality is critical.
 
-## Installation
+Safety applications often depend on data from different sources. Before information is shown to users, systems need to understand whether records contain the required structure, context, and traceability.
 
-Requirements:
+The validator provides a technical quality layer by checking:
 
-- Node.js 20+
+* whether required fields are present;
+* whether source information is available;
+* whether timestamps are valid;
+* whether geographic information is structured correctly;
+* whether emergency categories and severity levels are valid;
+* whether language metadata is available;
+* whether safety instructions follow expected structures.
 
-Install dependencies:
+The goal is not to replace emergency authorities, but to help build more reliable information systems.
 
-```bash
-npm install
-```
+---
 
-## Run Tests
+## Cross-border safety approach
 
-Execute the automated test suite:
+Portugal Safe is designed with the reality of Southern Europe in mind.
 
-```bash
-npm test
-```
+Wildfires and other natural risks do not stop at national borders. Portugal, Spain, and France are connected through travel routes, climate risks, and shared regional challenges.
 
-Current test coverage includes:
+Current scope:
 
-- valid emergency record acceptance;
-- invalid emergency record rejection;
-- required field validation.
+* Portugal: broader public-safety focus.
+* Spain and France: currently focused mainly on wildfire-related information.
 
-## Validation Example
+The long-term vision is to expand toward a wider European safety information network.
 
-A valid emergency record returns:
+---
 
-```json
-{
-  "valid": true,
-  "errors": []
-}
-```
+## Multilingual accessibility
 
-An invalid record returns validation errors describing missing or incorrect fields.
+Emergency information is most useful when people can understand it quickly.
 
-## Design Principles
+Portugal Safe is developed for international users, including:
 
-This project follows these principles:
+* residents;
+* expatriates;
+* tourists;
+* travellers moving through Europe.
 
-- traceable emergency data;
-- explicit validation failures;
-- separation between data validation and emergency decision-making;
-- no embedded credentials or secrets;
-- security-first repository practices.
+The application supports five languages to make safety information accessible beyond a single national language.
 
-## Scope
+Future developments include improving multilingual emergency communication and making safety information easier to understand during stressful situations.
 
-This validator checks the structure and quality of emergency records.
+---
 
-It does not:
+## AI and future development
 
-- create emergency alerts;
-- replace official emergency authorities;
-- verify that external sources are truthful;
-- guarantee real-world emergency outcomes.
+Future development directions include AI-assisted safety support based on structured and reliable information.
 
-The validator is a supporting technical component, not a replacement for official emergency services.
+Possible future capabilities include:
 
-## Verification
+* answering user safety questions;
+* guiding users through emergency preparation;
+* supporting first-aid information workflows;
+* connecting users with structured safety knowledge.
 
-Current repository verification:
+Any AI assistance must remain based on reliable information sources and clear safety boundaries.
 
-- GitHub Actions CI: passing
-- Test Suites: 1 passed
-- Tests: 2 passed
-- Security checks completed
-- No committed secrets detected
+In an emergency situation, users should always contact official emergency services.
 
-## Relationship to Portugal Safe
+**Call 112 for immediate emergencies.**
 
-This project is an independent open-source component related to emergency data quality and public-safety technology.
+---
 
-It is designed to support reliable emergency information systems without exposing private application infrastructure or operational credentials.
+## Technical architecture
+
+The validator currently contains:
+
+* JavaScript validation logic;
+* JSON schema validation;
+* command-line validation tooling;
+* example emergency records;
+* automated tests;
+* GitHub Actions continuous integration.
+
+Validation workflow:
+
+1. Emergency data enters the validator.
+2. Validation rules check structure and required information.
+3. Errors are returned when requirements are not met.
+4. Valid records can continue into supported applications.
+
+---
+
+## Safety boundaries
+
+This project:
+
+* does not replace emergency authorities;
+* does not create official emergency alerts;
+* does not guarantee emergency outcomes;
+* does not replace professional medical or emergency services.
+
+Portugal Safe and the Emergency Validator are supporting technology designed to improve access to reliable safety information.
+
+---
+
+## Roadmap
+
+Future improvements may include:
+
+* additional emergency data formats;
+* broader validation rules;
+* more official source integrations;
+* automated emergency feed quality checks;
+* AI-assisted data quality analysis;
+* expansion toward wider European safety information workflows.
+
+---
+
+## Open-source principles
+
+The project follows:
+
+* transparent validation rules;
+* responsible security practices;
+* no exposed credentials or private infrastructure;
+* reproducible testing;
+* clear technical boundaries.
+
+---
 
 ## License
 
