@@ -1,19 +1,21 @@
 #!/usr/bin/env node
 
+const fs = require("fs");
 const { validateEmergencyRecord } = require("../src/validator");
 
-const record = {
-  id: "cli-test-001",
-  source: "official-source",
-  issuedAt: "2026-07-31T05:00:00Z",
-  updatedAt: "2026-07-31T05:10:00Z",
-  category: "wildfire",
-  severity: "high",
-  location: "Portugal",
-  language: "en",
-  instructions: "Follow official instructions."
-};
+const filePath = process.argv[2];
 
-const result = validateEmergencyRecord(record);
+if (!filePath) {
+  console.error("Usage: node bin/validate-emergency.js <json-file>");
+  process.exit(1);
+}
+
+const json = JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+const result = validateEmergencyRecord(json);
 
 console.log(JSON.stringify(result, null, 2));
+
+if (!result.valid) {
+  process.exit(1);
+}
