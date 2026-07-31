@@ -1,3 +1,5 @@
+[![Test](https://github.com/Hugobosch28/portugal-safe-emergency-validator/actions/workflows/test.yml/badge.svg)](https://github.com/Hugobosch28/portugal-safe-emergency-validator/actions)
+
 # Portugal Safe Emergency Validator
 
 Open-source validation toolkit for emergency and public-safety data records.
