@@ -1,43 +1,131 @@
 # Portugal Safe Emergency Validator
 
-Open-source validation toolkit for official emergency and public-safety data feeds.
+Open-source validation toolkit for emergency and public-safety data records.
 
-## Status
+## Overview
 
-**Working prototype.**
+Portugal Safe Emergency Validator helps developers verify that emergency records contain the required structure, provenance information, timestamps, geographic context, and safety instructions before they are consumed by applications.
 
-The repository contains:
-
-- emergency record validation schema;
-- validator implementation;
-- valid and invalid example records;
-- automated tests;
-- command-line validation tool.
-
-The current version validates structural completeness of emergency records before they are consumed by applications.
+The goal is to improve the reliability, traceability, and consistency of emergency information workflows.
 
 ## Why this matters
 
-Emergency applications often consume data from multiple official sources.
+Emergency applications often combine information from multiple official and operational sources.
 
-Incomplete, outdated, or structurally invalid emergency records can reduce the reliability of information delivered to users.
+Incomplete records, missing provenance, invalid timestamps, or unclear instructions can reduce the reliability of safety information delivered to users.
 
-This project provides validation tooling that helps developers detect missing provenance, incomplete fields, and unsafe record structures before emergency data is consumed by applications.
+This project provides a validation layer that helps detect structural problems before emergency data is processed by downstream systems.
 
-## Verification
+## Features
 
-The current validator implementation has automated tests.
+The validator currently checks:
 
-Test result:
+- required emergency record fields;
+- source and provenance information;
+- issued and updated timestamps;
+- emergency categories;
+- severity levels;
+- geographic information;
+- language metadata;
+- safety instructions.
 
-- Test Suites: 1 passed
-- Tests: 2 passed
-- Valid emergency record: PASS
-- Invalid emergency record detection: PASS
+The repository includes:
 
-Run tests locally:
+- validation schema;
+- validator implementation;
+- command-line validation tool;
+- example emergency records;
+- automated tests;
+- GitHub Actions CI workflow.
+
+## Project Structure
+
+```
+src/        Validator implementation
+bin/        Command-line validation tool
+schema/     Emergency record schema and examples
+test/       Automated tests
+.github/    Continuous integration workflow
+```
+
+## Installation
+
+Requirements:
+
+- Node.js 20+
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+## Run Tests
+
+Execute the automated test suite:
+
+```bash
 npm test
-​`​`​`
+```
+
+Current test coverage includes:
+
+- valid emergency record acceptance;
+- invalid emergency record rejection;
+- required field validation.
+
+## Validation Example
+
+A valid emergency record returns:
+
+```json
+{
+  "valid": true,
+  "errors": []
+}
+```
+
+An invalid record returns validation errors describing missing or incorrect fields.
+
+## Design Principles
+
+This project follows these principles:
+
+- traceable emergency data;
+- explicit validation failures;
+- separation between data validation and emergency decision-making;
+- no embedded credentials or secrets;
+- security-first repository practices.
+
+## Scope
+
+This validator checks the structure and quality of emergency records.
+
+It does not:
+
+- create emergency alerts;
+- replace official emergency authorities;
+- verify that external sources are truthful;
+- guarantee real-world emergency outcomes.
+
+The validator is a supporting technical component, not a replacement for official emergency services.
+
+## Verification
+
+Current repository verification:
+
+- GitHub Actions CI: passing
+- Test Suites: 1 passed
+- Tests: 2 passed
+- Security checks completed
+- No committed secrets detected
+
+## Relationship to Portugal Safe
+
+This project is an independent open-source component related to emergency data quality and public-safety technology.
+
+It is designed to support reliable emergency information systems without exposing private application infrastructure or operational credentials.
+
+## License
+
+MIT License
