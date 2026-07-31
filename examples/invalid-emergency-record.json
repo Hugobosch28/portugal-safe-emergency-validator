@@ -1,0 +1,10 @@
+{
+  "id": "example-invalid-record-001",
+  "source": "",
+  "issuedAt": "invalid-date",
+  "category": "unknown",
+  "severity": "critical",
+  "location": "Portugal",
+  "language": "xx",
+  "instructions": ""
+}
