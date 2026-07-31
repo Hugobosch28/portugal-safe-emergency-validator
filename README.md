@@ -1,4 +1,4 @@
-# Portugal Safe Emergency Validator
+﻿# Portugal Safe Emergency Validator
 
 [![Test](https://github.com/Hugobosch28/portugal-safe-emergency-validator/actions/workflows/test.yml/badge.svg)](https://github.com/Hugobosch28/portugal-safe-emergency-validator/actions)
 
@@ -123,6 +123,19 @@ Validation workflow:
 
 ---
 
+## Verified capabilities
+
+The repository currently demonstrates:
+
+* emergency record validation through JavaScript logic;
+* JSON schema-based structure checks;
+* command-line validation of example records;
+* automated tests for valid and invalid emergency records;
+* GitHub Actions continuous integration.
+
+
+---
+
 ## Safety boundaries
 
 This project:
@@ -164,3 +177,4 @@ The project follows:
 ## License
 
 MIT License
+
