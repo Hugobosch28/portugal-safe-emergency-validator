@@ -4,7 +4,16 @@ Open-source validation toolkit for official emergency and public-safety data fee
 
 ## Status
 
-**Early development.** The repository currently defines the public scope of the project. The validator implementation and automated tests will be added in subsequent releases.
+**Working prototype.**
+
+The repository contains:
+- emergency record validation schema;
+- validator implementation;
+- valid and invalid example records;
+- automated tests;
+- command-line validation tool.
+
+The current version validates structural completeness of emergency records before they are consumed by applications.
 ## Verification
 
 The current validator implementation has automated tests.
