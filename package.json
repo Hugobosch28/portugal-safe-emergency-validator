@@ -1,0 +1,12 @@
+{
+  "name": "portugal-safe-emergency-validator",
+  "version": "0.1.0",
+  "description": "Open-source validation toolkit for official emergency and public-safety data feeds.",
+  "main": "src/validator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
