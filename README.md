@@ -5,6 +5,22 @@ Open-source validation toolkit for official emergency and public-safety data fee
 ## Status
 
 **Early development.** The repository currently defines the public scope of the project. The validator implementation and automated tests will be added in subsequent releases.
+## Verification
+
+The current validator implementation has automated tests.
+
+Test result:
+
+- Test Suites: 1 passed
+- Tests: 2 passed
+- Valid emergency record: PASS
+- Invalid emergency record detection: PASS
+
+Run tests locally:
+
+```bash
+npm install
+npm test
 
 ## Purpose
 
